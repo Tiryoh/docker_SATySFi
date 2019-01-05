@@ -6,6 +6,6 @@ before_script:
   - git clone https://github.com/gfngfn/SATySFi /tmp/SATySFi
 script:
   - docker build -t tiryoh/dev .
-  - cd /tmp/SATySFi/doc && docker run --rm --volume "${PWD}":/source test
-  - cd /tmp/SATySFi/demo && cp ../tests/images/satysfi-logo-rgb.jpg satysfi-logo.jpg && docker run --rm --volume "${PWD}":/source test
-  # - cd /tmp/SATySFi/tests && docker run --rm --volume "${PWD}":/source test
+  - cd /tmp/SATySFi/doc && docker run --rm --volume "${PWD}":/source tiryoh/dev
+  - cd /tmp/SATySFi/demo && cp ../tests/images/satysfi-logo-rgb.jpg satysfi-logo.jpg && docker run --rm --volume "${PWD}":/source tiryoh/dev
+  # - cd /tmp/SATySFi/tests && docker run --rm --volume "${PWD}":/source tiryoh/dev
